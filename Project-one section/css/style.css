@@ -168,4 +168,71 @@ body {
 }
 .individual-section .items .img a img:hover {
   transform: translateY(20px);
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .individual-section .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .individual-section .items::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.326);
+  }
+  .individual-section .items .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3rem 0rem;
+  }
+  .individual-section .items .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0rem;
+  }
+}
+@media (max-width: 575px) {
+  .individual-section .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .individual-section .items::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.326);
+  }
+  .individual-section .items .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3rem 0rem;
+  }
+  .individual-section .items .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0rem;
+  }
 }/*# sourceMappingURL=style.css.map */
