@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: black;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c80000;
+}
+
+span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c80000;
+  margin-top: 1rem;
+}
+
+.items {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  border-radius: 22px;
+  padding: 5rem 5rem;
+  box-shadow: rgba(255, 255, 255, 0.459) 0px 5px;
+  transition: all 0.3s linear;
+}
+
+.item:hover {
+  box-shadow: rgb(255, 255, 255) 0px 3px 8px;
+}
