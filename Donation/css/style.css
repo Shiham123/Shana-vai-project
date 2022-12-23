@@ -11,8 +11,10 @@ body {
 }
 
 .cover .img {
+  margin: 0 auto;
+  text-align: center;
   width: 100vw;
-  height: 70vh;
+  height: 95vh;
   opacity: 0.9;
 }
 .cover .img img {
@@ -72,7 +74,20 @@ body {
 .youtube {
   margin-top: 10rem;
   margin-bottom: 3rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+}
+.youtube .img {
+  width: 560px;
+  height: 315px;
+}
+.youtube .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .guest {
@@ -136,91 +151,61 @@ body {
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-.container {
-  margin-bottom: 7rem;
-  margin-top: -5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container h1 {
-  margin: 3rem 0rem;
-  font-size: 30px;
+.grid h1 {
+  font-size: 40px;
+  margin: 5rem 1rem;
   opacity: 0.7;
   color: green;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  text-align: center;
 }
-.container .top {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+.grid .items {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 100vh;
 }
-.container .top i {
-  font-size: 5rem;
-  cursor: pointer;
-  color: green;
+.grid .items .image {
+  width: 400px;
+  height: 400px;
+  margin: 1.5rem;
   transition: all 0.3s linear;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-.container .top i:hover {
-  color: rgba(0, 128, 0, 0.612);
-}
-.container .top .frame {
-  display: flex;
-  width: 900px;
-  height: 500px;
-  overflow: hidden;
-}
-.container .top .frame .slider {
-  display: flex;
-  transition: all 0.4s ease-in-out;
-}
-.container .top .frame .slider img {
-  margin: 1rem;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.grid .items .image:hover {
+  transform: scale(1.111);
 }
 
 @media (min-width: 575px) and (max-width: 768px) {
-  .container {
+  .youtube {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container .top {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .container .top i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: green;
-    transition: all 0.3s linear;
-  }
-  .container .top i:hover {
-    color: rgba(0, 128, 0, 0.612);
-  }
-  .container .top .frame {
-    display: flex;
-    width: 550px;
-    height: 300px;
-    overflow: hidden;
-  }
-  .container .top .frame .slider {
-    display: flex;
-    transition: all 0.4s ease-in-out;
-  }
-  .container .top .frame .slider img {
+  .youtube .img {
+    width: 560px;
+    height: 315px;
     margin: 1rem;
+  }
+  .youtube .img img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .grid .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid .items .image {
+    width: 330px;
+    height: 330px;
+    margin: 1.5rem;
+  }
 }
-@media (max-width: 576px) {
+@media (min-width: 451px) and (max-width: 576px) {
   .cover .img {
     width: 100vw;
     height: 50vh;
@@ -257,41 +242,27 @@ body {
   .netflix h4 {
     font-size: 30px;
   }
-  .youtube {
-    margin: 1rem;
+  .grid .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
-  .container {
+  .grid .items .image {
+    width: 400px;
+    height: 400px;
+    margin-left: 3rem;
+  }
+  .youtube {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container .top {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .container .top i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: green;
-    transition: all 0.3s linear;
-  }
-  .container .top i:hover {
-    color: rgba(0, 128, 0, 0.612);
-  }
-  .container .top .frame {
-    display: flex;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-  }
-  .container .top .frame .slider {
-    display: flex;
-    transition: all 0.4s ease-in-out;
-  }
-  .container .top .frame .slider img {
+  .youtube .img {
+    width: 560px;
+    height: 315px;
     margin: 1rem;
+  }
+  .youtube .img img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -299,38 +270,57 @@ body {
   }
 }
 @media (max-width: 450px) {
-  .container {
+  .cover .img {
+    width: 100vw;
+    height: 50vh;
+    opacity: 0.9;
+  }
+  .cover .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: center;
+       object-fit: center;
+  }
+  .cover .text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .cover .text h4 {
+    color: green;
+    padding-top: 3rem;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .cover .text p {
+    padding: 1.5rem 0rem;
+    font-size: 22px;
+  }
+  .cover .text p span {
+    font-size: 23px;
+    font-weight: 600;
+    color: green;
+  }
+  .grid .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid .items .image {
+    width: 350px;
+    height: 350px;
+    margin-left: 3rem;
+  }
+  .youtube {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container .top {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .container .top i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: green;
-    transition: all 0.3s linear;
-  }
-  .container .top i:hover {
-    color: rgba(0, 128, 0, 0.612);
-  }
-  .container .top .frame {
-    display: flex;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-  }
-  .container .top .frame .slider {
-    display: flex;
-    transition: all 0.4s ease-in-out;
-  }
-  .container .top .frame .slider img {
+  .youtube .img {
+    width: 560px;
+    height: 315px;
     margin: 1rem;
+  }
+  .youtube .img img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
